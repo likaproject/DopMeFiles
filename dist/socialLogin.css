@@ -1,0 +1,18 @@
+#socialLogin {
+  width: 40%; }
+  #socialLogin__header {
+    color: #808080; }
+    #socialLogin__header:before {
+      content: '';
+      width: 50px;
+      height: 2px;
+      display: inline-block;
+      vertical-align: middle;
+      background: lightgrey; }
+    #socialLogin__header:after {
+      content: "";
+      width: 50px;
+      height: 2px;
+      display: inline-block;
+      vertical-align: middle;
+      background-color: lightgrey; }

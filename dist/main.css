@@ -1,0 +1,67 @@
+.main {
+  background-color: #fec107;
+  width: 670px;
+  height: 620px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .main__container {
+    background-color: #ffffff;
+    width: 560px;
+    height: 520px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+#loginForm {
+  width: 45%;
+  padding: 0;
+  float: left; }
+
+h3 {
+  color: #1b1b1b;
+  text-align: left; }
+
+#username {
+  min-width: 50px; }
+
+#regForm {
+  width: 50%;
+  padding: 0;
+  float: right; }
+  #regForm__submit {
+    width: 50%;
+    height: 20px;
+    background-color: #72d848;
+    border: none;
+    border-radius: 3px; }
+
+input {
+  margin: 3px 0; }
+
+#socialLogin {
+  width: 40%; }
+  #socialLogin__header {
+    color: #808080; }
+    #socialLogin__header:before {
+      content: '';
+      width: 50px;
+      height: 2px;
+      display: inline-block;
+      vertical-align: middle;
+      background: lightgrey; }
+    #socialLogin__header:after {
+      content: "";
+      width: 50px;
+      height: 2px;
+      display: inline-block;
+      vertical-align: middle;
+      background-color: lightgrey; }
+
+html, body {
+  background-color: #000000;
+  padding: 0;
+  margin: 0;
+  font-size: 14px; }

@@ -1,0 +1,11 @@
+#loginForm {
+  width: 45%;
+  padding: 0;
+  float: left; }
+
+h3 {
+  color: #1b1b1b;
+  text-align: left; }
+
+#username {
+  min-width: 50px; }

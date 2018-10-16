@@ -1,14 +1,22 @@
 {
   "name": "loginform",
   "version": "1.0.0",
-  "description": "",
+  "description": "Login Form for some project",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "likaproject <kaidalovaolena@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.1"
+  },
+  "scripts": {
+    "build": "gulp"
   }
 }
+
+	
+
