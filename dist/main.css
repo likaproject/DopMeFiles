@@ -538,4 +538,51 @@ textarea {
     right: 60px; }
 
 .foot {
-  height: 200px; }
+  height: 200px;
+  display: flex;
+  align-items: center; }
+
+.enetcom, .partners {
+  display: flex;
+  opacity: .8; }
+
+.enetcom {
+  width: 55%;
+  padding-right: 50px;
+  justify-content: flex-end; }
+
+.partners {
+  width: 45%;
+  justify-content: center; }
+
+.enetcom__menu {
+  padding: 3px;
+  font-size: 0.9em; }
+  .enetcom__menu_item {
+    color: #999;
+    border-right: 1px solid #999;
+    padding: 0 7px;
+    transition: color 0.5s; }
+    .enetcom__menu_item:last-child {
+      border-right: none; }
+    .enetcom__menu_item:hover {
+      color: #5f5f5f; }
+
+.partners__item {
+  border-right: 1px dashed #999;
+  height: 47px;
+  width: 96px; }
+  .partners__item:first-child {
+    background: url(../src/images/projects/nabludatel.png) no-repeat; }
+    .partners__item:first-child:hover {
+      background: url(../src/images/projects/nabludatel-hover.png) no-repeat; }
+  .partners__item:nth-child(2) {
+    background: url("../src/images/projects/tv.png") no-repeat center;
+    width: 75px; }
+    .partners__item:nth-child(2):hover {
+      background: url("../src/images/projects/tv-hover.png") no-repeat center; }
+  .partners__item:last-child {
+    border-right: none;
+    background: url("../src/images/projects/smart.png") no-repeat; }
+    .partners__item:last-child:hover {
+      background: url("../src/images/projects/smart-hover.png") no-repeat; }

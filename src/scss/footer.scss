@@ -2,6 +2,93 @@
 
 .foot{
     height: 200px;
+    display: flex;
+    align-items: center;
     
 }
+.enetcom, .partners{
+    display: flex;
+    opacity: .8;
+}
+.enetcom{
+    width: 55%;
+    padding-right: 50px;
+    justify-content: flex-end;
+    
+}
+.partners{
+    width: 45%;
+    justify-content: center;
+}
+.enetcom__menu{
+    padding: 3px;
+    font-size: 0.9em;
+    &_item{
+        color: $inputTextColor;
+        border-right: 1px solid $inputTextColor;
+        padding: 0 7px;
+        transition: color 0.5s;
+        &:last-child{
+            border-right: none;
+        }
+        &:hover{
+           color: $darckBg; 
+        }
+    } 
+}
+.partners{
+    &__item{
+        border-right: 1px dashed $inputTextColor;
+        height: 47px;
+        width: 96px;
+        &:first-child{
+            background: url(../src/images/projects/nabludatel.png) no-repeat;
+            &:hover{
+                background: url(../src/images/projects/nabludatel-hover.png) no-repeat;
+            }
+        }
+        &:nth-child(2){
+            background: url('../src/images/projects/tv.png') no-repeat center;
+            width: 75px;
+            &:hover{
+                background: url('../src/images/projects/tv-hover.png') no-repeat center;
+            }
+        }
+        &:last-child{
+            border-right: none;
+            background: url('../src/images/projects/smart.png') no-repeat;
+            &:hover{
+                background: url('../src/images/projects/smart-hover.png') no-repeat;
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
