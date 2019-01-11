@@ -1,0 +1,49 @@
+@import 'colors.scss';
+
+.main{
+    height: 140px;
+    width: 100%;
+    background-color: $darckBg;
+}
+.social{
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    &__ico, &__text{
+        display: table-cell; 
+        vertical-align: middle;
+    }
+    &__text{
+        color: $mutedTextColor;
+        font-size: 1em;
+        height: 140px;
+        margin: auto 0;
+        padding-left: 15px;
+        & p {
+            padding: 20px 5px;
+            letter-spacing: -0.5px;
+        }
+    }
+    &__ico{
+        vertical-align: middle;
+        margin-left: 50px;
+    }
+    &__help, &__rules{
+        height: 18px;
+        width: 62px;
+        background-color: $mainFeature;
+        border-radius: 0 0 8px 8px;
+        position: absolute;
+        top: 0;
+        text-decoration: none;
+        text-align: center;
+        color: $mutedTextColor;
+        line-height: 18px;
+    }
+    &__help{
+        right: 130px;
+    }
+    &__rules{
+        right: 60px;
+    }
+}

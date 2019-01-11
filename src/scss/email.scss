@@ -1,0 +1,357 @@
+@import 'colors.scss';
+
+.email{
+    height: 370px;
+    background: $emailBg url('../src/images/uploader/city.png') center bottom no-repeat;
+    position: relative;
+    top: 0;
+}
+.dropForm{
+    width: 100%;
+    position: relative;
+    left: 10%;
+    top: 20px;
+    font-family: calibri;
+    font-weight: 400;
+    &__inputRow{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 6px 0;
+        &_input{
+            font-size: 26px;
+            color: $inputTextColor;
+            height: 44px;
+            width: 350px;
+            border: 0;
+            background-color: $inputBg;
+            padding-left: 10px;
+            &::-webkit-input-placeholder{
+                color: $inputPlaceholderColor;
+            }
+        }
+        &_label{
+            border-radius: 6px 0 0 6px;
+            border-right: 1px dotted $labelBorder;
+            width: 90px;
+            background-color: $labelBg;
+            color: $labelTextColor;
+            height: 44px;
+            width: 103px;
+            padding-right: 7px;
+            font-size: 22px;
+            text-align: right;
+            line-height: 44px;
+            font-weight: 200;
+        }
+        &_btn{
+            height: 44px;
+            width: 62px;
+            border: none;
+            background-color: $inputBg;
+            border-radius: 0 6px 6px 0;
+            .bgTransparent{
+              opacity: 0.3;  
+            }
+            
+        }
+        .showTextarea{
+            border-radius: 0 6px 6px 0;
+            background-color: $labelBg;
+            position: relative;
+            width: 60px;
+            height: 44px;
+            margin-left: 2px;
+            &_passive{
+                background: url('../src/images/uploader/comm_passive.png') no-repeat center;
+                opacity: 0.6;
+                &:hover{
+                    opacity: 1;
+                    cursor: pointer;
+                } 
+            }
+            &_active{
+                background: url('../src/images/uploader/comm_active.png') no-repeat center;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#textareaContainer{
+    position: relative;
+    top: 0;
+    left: 110px;
+    margin: 12px;
+    display: none;
+    #textarea{
+        display: flex;
+        flex-direction: row;
+        height: 120px;
+        width: 450px;
+        background-color: $textAreaBg;
+        border: 10px solid $textAreaBg;
+        border-radius: 0 8px 8px 0;
+        right: 0; 
+        textarea::-webkit-input-placeholder{
+            color: $inputTextColor;
+        }
+    }
+    .triangle{
+            position: absolute;
+            top: 70px;
+            left: -20px;
+        }
+}
+textarea{
+        border: none;
+        background-color: $textAreaBg;
+        resize: none;
+        font-family: calibri;
+        font-size: 18px;
+    }
+
+      
+.bgTransparent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 62px;
+    height: 49px;
+    text-align: center; 
+    span{
+        color: #919393;
+        font-size: 9px;
+        margin: 0 auto;
+        display: block;
+    }
+    &_sent{
+        opacity: 0.4;
+    }
+}   
+
+.params{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: relative;
+    top: 20px;
+    &_cover{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;   
+    }
+    &__item{
+        color: #8a8a8a;
+        font-size: 10px;
+        line-height: 17px;
+        font-family: Calibri-Bold;
+        text-transform:  uppercase;
+        &:nth-child(n-2){
+            margin-right: 10px;
+        }
+    }
+    &__radio{
+        visibility: visible;
+        margin: 0 3px;
+    }
+
+}
+.locks{
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    height: 17px;
+    width: 85px;
+    & img:last-child{
+        float: right;
+        opacity: 0.5;
+    }
+}
+.num_switcher{
+    height: 17px;
+    width: 100px;
+    &__item{
+        display: inline-block;
+        color: #8a8a8a;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 17px;
+        font-family: Calibri-Bold;
+        text-transform:  uppercase;
+        &:last-child{
+            float: right;
+            opacity: 0.5;
+        }
+    }
+}
+#pass_label{
+    position: relative;
+    display: block;
+    float: none;
+    margin: 0 10px;
+    &:before{
+        content: "";
+        display: block;
+        height: 7px;
+        width: 32px;
+        background-color: $inputBg;
+        border-radius: 3px;
+        position: absolute;
+        top: 5px;
+        left: 15px;
+    }
+    &:after{
+        content: "";
+        display: block;
+        height: 5px;
+        width: 16px;
+        position: absolute;
+        top: 6px;
+        left: 16px;
+        background: url("../src/images/uploader/pass_slider.png") no-repeat center;
+    }
+}
+#num_label{
+    position: relative;
+    display: block;
+    float: none;
+    margin: 0 10px;
+    &:before{
+        content: "";
+        display: block;
+        height: 7px;
+        width: 32px;
+        background-color: $inputBg;
+        border-radius: 3px;
+        position: absolute;
+        top: 5px;
+        left: 25px;
+    }
+    &:after{
+        content: "";
+        display: block;
+        height: 5px;
+        width: 16px;
+        position: absolute;
+        top: 6px;
+        left: 36px;
+        background: url("../src/images/uploader/pass_slider.png") no-repeat center;
+    }
+}
+//Smooth switcher 
+#pass_switcher, #num_switcher{
+    display: none;
+}
+#pass_switcher{
+    &:checked + label #closed{
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    &:not(:checked) + label #closed{
+        opacity: 0.5;
+        transition: opacity 0.5s;
+    }
+    &:checked + label #open{
+        opacity: 0.5;
+        transition: opacity 0.5s;
+    }
+    &:not(:checked) + label #open{
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    &:checked + #pass_label:after{
+        left: 30px;
+        transition: left 0.5s;
+    }
+    &:not(:checked) + #pass_label:after{
+        left: 16px;
+        transition: left 0.5s;
+    }
+}
+#num_switcher{
+    &:checked + label #num{
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    &:not(:checked) + label #num{
+        opacity: 0.5;
+        transition: opacity 0.5s;
+    }
+    &:checked + label #abc{
+        opacity: 0.5;
+        transition: opacity 0.5s;
+    }
+    &:not(:checked) + label #abc{
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+    &:checked + #num_label:after{
+        left: 40px;
+        transition: left 0.5s;
+    }
+    &:not(:checked) + #num_label:after{
+        left: 26px;
+        transition: left 0.5s;
+    }
+}
+.switch{
+    height: 7px;
+    width: 32px;
+    border-radius: 3px;
+    background-color: $inputBg;
+    position: relative;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right: 20px solid $textAreaBg;
+    border-bottom: 20px solid $textAreaBg;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

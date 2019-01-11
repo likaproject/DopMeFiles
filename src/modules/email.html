@@ -1,0 +1,88 @@
+<div class="wrap email">
+    <div class="params container">
+        <div class="params_cover">
+            
+            <!-- Radio buttons zone-->
+            <img src="../src/images/uploader/period_bg.png" class="params__item"/>
+            
+            <input type="radio" name="download" class="params__radio" id="one">
+            <label for="one" class="params__item">1 скачивание</label>
+            
+            <input type="radio" name="download" class="params__radio" id="two" checked>
+            <label for="two" class="params__item">7 дней</label>
+            
+            <input type="radio" name="download" class="params__radio" id="three">
+            <label for="three" class="params__item">14 дней</label>
+            <!-- End radio buttons zone-->
+            
+            <!--Switch password-->
+            <div class="locks" id="locks">
+                
+                <input type="checkbox" class="params__input" id="pass_switcher" name="pass_switcher"/>
+              
+                <label id="pass_label" for="pass_switcher">
+        
+                    <img src="../src/images/uploader/pass_open.png" id="open"/>
+                    <img src="../src/images/uploader/pass_closed.png" id="closed"/> 
+                    
+                </label>
+            
+            </div>
+            <!-- End switch password-->
+            <!-- Switch to numbers-->
+            <div class="num_switcher">
+                
+                <input type="checkbox" class="params__input" id="num_switcher" name="num_switcher"/>
+              
+                <label id="num_label" for="num_switcher">
+                    <span class="num_switcher__item" id="abc">ABC</span>
+                    <span class="num_switcher__item" id="num">123</span> 
+                </label>
+            </div>
+            
+            <!-- End switch to numbers-->
+        </div>
+    </div>
+    
+    <div class="params container">
+        <form action="#" type="POST" name="dropForm" id="dropForm" class="dropForm">
+            
+            <div class="dropForm__inputRow">
+                
+                <label class="dropForm__inputRow_label" for="mail">КОМУ:</label>
+                
+                <input class="dropForm__inputRow_input" type="text" name="mail" id="message" placeholder="E-mail или SMS-номер" autocomplete="off" class=""/>
+                
+                <!--Show textarea: click event target zone-->
+                <div id="showTextarea" class="showTextarea">
+                        <div class="bgTransparent showTextarea_passive" id="bgTransparent">
+                            <span>0/450</span>
+                        </div> 
+                </div>
+                <!--End show textarea: click event target zone--> 
+                
+            </div>
+            
+            <div class="textareaContainer" id="textareaContainer" style="display: none">
+                <div class="triangle"></div>
+                
+                <div id="textarea">
+                     <textarea placeholder="описание" minlength="0" maxlength="450" rows="7" cols="50" name="messageText"></textarea>
+                </div>
+            </div>
+            
+            <div class="dropForm__inputRow">
+                <label class="dropForm__inputRow_label" for="recipient">ОТ КОГО:</label>
+                <input class="dropForm__inputRow_input" type="text" name="recipient" id="recipient" placeholder="Имя или E-mail" autocomplete="off" class="t"/>
+                
+                <button class="dropForm__inputRow_btn" type="submit" name="submit" id="submit">
+                    <div class="bgTransparent_sent">
+                        <img src="../src/images/uploader/send.png"/>
+                    </div>
+                    
+                </button>
+            </div>
+            
+        </form>
+    </div>
+</div>

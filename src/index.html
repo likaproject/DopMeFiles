@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="main.css">
-    <title>Login Form</title>
+    <title>dropmefiles</title>
 </head>
 <body>
-    <div class="main">
-        <div class="main__container">
-            {% include "src/modules/login.html" %}
-            {% include "src/modules/register.html" %}
-            {% include "src/modules/socialLogin.html" %}
-            {% include "src/modules/footerLogin.html" %}
-        </div>
+    <div class="wrap">
+        {% include "src/modules/header.html" %}
+        {% include "src/modules/drop.html" %}
+        {% include "src/modules/email.html" %}
+        {% include "src/modules/social.html" %}
+        {% include "src/modules/footer.html" %}
     </div>
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/drop.js"></script>
+    <script src="../src/js/email.js"></script>
 </body>
 </html>

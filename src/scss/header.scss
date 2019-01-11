@@ -1,0 +1,55 @@
+.main_nav{
+    height: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $mainFeature;
+    &__langContainer{
+        background: #b9cad4;
+        height: 20px;
+        padding: 2px 5px;
+        border-radius: 0 0 10px 10px;
+        float: left;
+        width: 75px;
+        margin-left: 20px;
+    }
+    &__login{
+        float: left;
+        a{
+            line-height: 25px;
+            color: #fff;
+            font-size: .8em;
+            img{
+               vertical-align: middle;
+                margin-bottom: 2px;
+            }
+            span{
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+#ru, #en{
+    width: 30px;
+    height: 15px;
+    border-radius: 10px;
+    float: left;
+    text-align: center;
+    line-height: 15px;
+    box-shadow: 1px 1px 2px -1px #666 inset;
+}
+
+#en{
+    margin-left: 3px;
+}
+
+.active_lang{
+    background: $mainFeature;
+    color: $mutedTextColor;
+        }
+
+.disabled_lang{
+    background: $mutedTextColor;
+    color: $mainFeature;
+}

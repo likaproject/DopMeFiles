@@ -1,0 +1,153 @@
+@import 'colors.scss';
+
+.dropBlock{
+    height: 486px;
+    &__likeMe{
+        background: url(../src/images/likeMe/like-layer.png) no-repeat;
+        object-fit: cover;
+        height: 85px;
+        display: block;
+        width: 20px;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        &_item{
+           display: none;
+        }
+    }
+    &__likeMe_wide{
+        background: url(../src/images/likeMe/like-layer.png) no-repeat;
+        object-fit: cover;
+        height: 85px;
+        display: block;
+        width: 56px;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        &_item{
+           display: block;
+           margin-top: 3px;
+           margin-left: 23px;
+        }
+    }
+    &__dropField{
+        position: relative;
+        height: 170px;
+        top: 170px;
+        padding: 0 50px;
+        &_main{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+}
+
+.help{
+    opacity: 0;
+    transition: opacity 3s;
+    background-color: $inputBg;
+    &__download{
+        position: absolute;
+        top: 180px;
+        left: 150px;
+        height: 70px;
+        width: 200px;
+        border: 1px solid $mutedTextColor;
+        border-radius: 4px;
+        padding: 5px;
+        &_text{
+            font-size: 14px;
+            color: $darckTextColor;
+            padding: 0;
+            margin: 0;
+            & > span{
+                color: $lightFeature;
+                font-weight: bold;
+                display: inline-block;
+                padding-bottom: 3px;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                left: 168px;
+                border-width: 9px;
+                border-style: solid;
+                border-color: transparent $mutedTextColor $mutedTextColor transparent ;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                left: 169px;
+                border-width: 8px;
+                border-style: solid;
+                border-color: transparent $inputBg $inputBg  transparent ;
+            }
+            
+        }
+    }
+}
+#download:hover + .help{
+    opacity: 1;
+}
+.drop_arrow, .drop_logo, .drop_text, .drop_size{
+    display: flex;
+    flex-direction: column; 
+}
+.drop_arrow{
+    padding: 0;
+    &_img{
+        position: relative;
+        opacity: 0.5;
+        &:hover{
+            left: 20px;
+            opacity: 1;
+            transition: all .5s ease-in;
+        }
+        &:not(:hover){
+            left: 0;
+            opacity: 0.5s;
+            transition: all .5s ease-out;
+        }
+    }
+}
+.drop_logo{
+    position: relative;
+    align-self: flex-start;
+    height: 170px;
+    width: 170px; 
+}
+.logo{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    &:nth-child(2){
+          top: 45px;
+          left: 25px;
+        }
+}
+.drop_text{
+    position: relative;
+    padding: 10px;
+    & p{
+        font-family: Calibri-Bold;
+        color: $darckTextColor;
+        font-size: 1.3em;
+        padding: 0;
+        margin: 0;
+    }
+    & p:first-child{
+        font-size: 2.5em;
+        color: $lightFeature;
+        opacity: 0.8;
+        padding-bottom: 20px;
+    }
+}
+.drop_size{
+    position: relative;
+    align-self: baseline;
+}

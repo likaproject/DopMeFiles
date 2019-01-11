@@ -1,14 +1,74 @@
-@import 'colors.scss';
-@import 'container.scss';
-@import 'login.scss';
-@import 'register.scss';
-@import 'socialLogin.scss';
-@import 'footerLogin.scss';
-
-html, body {
-  background-color: #000000;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
+@font-face {
+  font-family: 'Calibri-Bold';
+  src: url('../src/fonts/Calibri-Bold/Calibri-Bold.eot');
+  src: url('../src/fonts/Calibri-Bold/Calibri-Bold.woff') format('woff'),
+       url('../src/fonts/Calibri-Bold/Calibri-Bold.ttf') format('truetype'),
+       url('../src/fonts/Calibri-Bold/Calibri-Bold.svg#Calibri-Bold') format('svg'),
+       url('../src/fonts/Calibri-Bold/Calibri-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'calibri';
+  src: url('../src/fonts/Calibri/calibri.woff') format('woff'),
+      url('../src/fonts/Calibri/calibri.eot?#iefix') format('embedded-opentype'),
+       url('../src/fonts/Calibri/calibri.ttf') format('truetype'),
+       url('../src/fonts/Calibri/calibri.svg#calibri') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+@import '_colors.scss';
+
+
+* {
+	box-sizing: border-box;
+    font-family: calibri;
+}
+
+html, body {
+  background-color: $mainBg;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  height: 100%;
+  width: 100%;
+  min-height: 768px;
+}
+
+.wrap {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    & > hr{
+        border: none;
+        background-color:  $darckTextColor;
+        color:  $darckTextColor;
+        height: 1px;
+        width: 100%;
+        margin: 1px 0;
+    }
+}
+
+.container {
+    //max-width: 1920px;
+    //min-width: 1024px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+@import 'header.scss';
+@import 'drop.scss';
+@import 'email.scss';
+@import 'social.scss';
+@import 'footer.scss';

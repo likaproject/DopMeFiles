@@ -1,77 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="main.css">
-    <title>Login Form</title>
+    <title>dropmefiles</title>
 </head>
 <body>
-    <div class="main">
-        <div class="main__container">
-            
-<form action="#" method="post" name="login" id="loginForm">
-    <h3>My Account Login</h3>
-    <label for="username">Username</label><br>
-    <input type="text" name="username" id="username"><br>
-    <label for="passw">Password</label><br>
-    <input type="text" name="passw" id="passw"><br>
-    <button type="submit" name="submit" id="loginForm__submit"></button>
-</form>
-            <form action="#" method="post" name="reg" id="regForm">
-    <h3>Registration</h3>
-    <label>First Name* <input type="text" name="firstName" id="firstName"></label>
-    <br>
-
-    <label>Last Name*<input type="text" name="lastName" id="lastName"></label>
-    <br>
-
-    <label>Password*<input type="text" name="passw" id="passw"></label>
-    <br>
-    <label>Confirm Password*<input type="text" name="passwConfirm" id="passwConfirm"></label>
-    <br>
-
-    <label>Date of Birth*<input type="number" name="month" min="1" max="12" placeholder="MM">
-        <input type="number" name="day" min="1" max="31" placeholder="DD">
-        <input type="number" name="year" min="1900" placeholder="YYYY"></label>
-
-    <label>Gender <select>
-        <option>Female</option>
-        <option>Male</option>
-    </select></label>
-    <br>
-
-    <label>Mobile/Cell No.* <input type="tel" name="tel" id="tel"></label>
-    <br>
-
-    <label>E-Mail*<input type="email" name="email" id="email"></label>
-    <br>
-    <label>Confirm E-Mail*<input type="email" name="confirmEmail" id="confirmEmail"></label>
-    <br>
-
-    <label for="addr">Address*</label>
-    <textarea name="addr" id="addr"></textarea><br>
-
-    <label for="city">City*</label><label for="state">State*</label>
-    <input type="text" name="city" id="city">
-    <input type="text" name="state" id="state"><br>
-
-    <label for="zipCode">Zip/Posatal Code*</label>
-    <input type="number" name="zipCode" id="zipCode"><br>
-
-    <label for="country">Country*</label>
-    <input type="text" name="country" id="country"><br>
-
-    <label><input type="checkbox"> Agreed in Terms and Confidence</label><br>
-    <button type="submit" name="submit" id="regForm__submit"></button>
-</form>
-            <div id="socialLogin">
-    <p id="socialLogin__header">Or Sign In With</p>
-    <a href="#" id="socialLogin__btn-1"><img src="../../src/img/tw.png" alt="" width="16" height="14"><span>Twitter
-    </span></a>
-    <a href="#" id="socialLogin__btn-2"><img src="../../src/img/fb.png" alt="" width="10" ><span>Facebook</span></a>
-    <a href="#" id="socialLogin__btn-3"><img src="../../src/img/google.png" alt="" width="10" ><span>Google+</span></a>
+    <div class="wrap">
+        <div class="main_nav wrap">
+    <div class="container">
+        
+        <div class="main_nav__login">
+            <a href="#"><img src="../src/images/uploader/user_login.png" alt=""/>
+                <span>ВХОД</span>
+            </a>
+        </div>
+        
+        <div class="main_nav__langContainer">
+            <a id="ru" class="active_lang" onclick="ruLangToUp()">Рус</a>
+            <a id="en" class="disabled_lang" onclick="enLangToUp()">Eng</a>
+        </div>
+        
+    </div>
 </div>
+        <div class="container dropBlock" id="dropBlock">
+    <div class="dropBlock__likeMe" id="likeMe">
+        <a href="#"><img src="../src/images/likeMe/share-fb.png" alt="Fb" class="dropBlock__likeMe_item"/></a>
+        <a href="#"><img src="../src/images/likeMe/share-vk.png" alt="Vk" class="dropBlock__likeMe_item"/></a>
+        <a href="#"><img src="../src/images/likeMe/share-tweet.png" alt="Tw" class="dropBlock__likeMe_item"/></a>
+    </div>
+    <div class="dropBlock__dropField">
+        
+            <div class="container dropBlock__dropField_main">
+                <div class="drop_arrow">
+                    <img src="../src/images/uploader/arrow.png" alt="" class="drop_arrow_img" id="drop_arrow_img" />
+                </div>
+                <!--Download file-->
+                <a href="../src/downloads/kaidalova_cv.pdf" id="download" download>
+                    <div class="drop_logo">
+                        <img src="../src/images/uploader/bg.png" alt="" class="logo"/>
+                        <img src="../src/images/uploader/logo.png" alt="" class="logo"/>
+                        <img src="../src/images/uploader/dot1.png" alt="" class="logo"/>
+                        <img src="../src/images/uploader/dot2.png" alt="" class="logo"/>
+                        <img src="../src/images/uploader/dot3.png" alt="" class="logo"/>  
+                    </div>
+                </a>
+                <div class="help help__download">
+                    <p class="help__download_text">
+                        <span>To upload file</span><br/>
+                        press the circle or drop file<br/>into gray field
+                    </p>
+                </div>
+                <div class="drop_text">
+                    <p>кидай <br/>файлы/папки</p>
+                    <p>для вставки изображения<br/> или текста из буфера обмена <br/>нажми CTRL+V</p>
+                </div>
+                <div class="dorp_size">
+                    <img src="../src/images/uploader/dnd.png" alt=""/>
+                </div>
+            </div>
+        
+    </div>
+</div>
+<hr/>
+        <div class="wrap email">
+    <div class="params container">
+        <div class="params_cover">
             
+            <!-- Radio buttons zone-->
+            <img src="../src/images/uploader/period_bg.png" class="params__item"/>
+            
+            <input type="radio" name="download" class="params__radio" id="one">
+            <label for="one" class="params__item">1 скачивание</label>
+            
+            <input type="radio" name="download" class="params__radio" id="two" checked>
+            <label for="two" class="params__item">7 дней</label>
+            
+            <input type="radio" name="download" class="params__radio" id="three">
+            <label for="three" class="params__item">14 дней</label>
+            <!-- End radio buttons zone-->
+            
+            <!--Switch password-->
+            <div class="locks" id="locks">
+                
+                <input type="checkbox" class="params__input" id="pass_switcher" name="pass_switcher"/>
+              
+                <label id="pass_label" for="pass_switcher">
+        
+                    <img src="../src/images/uploader/pass_open.png" id="open"/>
+                    <img src="../src/images/uploader/pass_closed.png" id="closed"/> 
+                    
+                </label>
+            
+            </div>
+            <!-- End switch password-->
+            <!-- Switch to numbers-->
+            <div class="num_switcher">
+                
+                <input type="checkbox" class="params__input" id="num_switcher" name="num_switcher"/>
+              
+                <label id="num_label" for="num_switcher">
+                    <span class="num_switcher__item" id="abc">ABC</span>
+                    <span class="num_switcher__item" id="num">123</span> 
+                </label>
+            </div>
+            
+            <!-- End switch to numbers-->
         </div>
     </div>
+    
+    <div class="params container">
+        <form action="#" type="POST" name="dropForm" id="dropForm" class="dropForm">
+            
+            <div class="dropForm__inputRow">
+                
+                <label class="dropForm__inputRow_label" for="mail">КОМУ:</label>
+                
+                <input class="dropForm__inputRow_input" type="text" name="mail" id="message" placeholder="E-mail или SMS-номер" autocomplete="off" class=""/>
+                
+                <!--Show textarea: click event target zone-->
+                <div id="showTextarea" class="showTextarea">
+                        <div class="bgTransparent showTextarea_passive" id="bgTransparent">
+                            <span>0/450</span>
+                        </div> 
+                </div>
+                <!--End show textarea: click event target zone--> 
+                
+            </div>
+            
+            <div class="textareaContainer" id="textareaContainer" style="display: none">
+                <div class="triangle"></div>
+                
+                <div id="textarea">
+                     <textarea placeholder="описание" minlength="0" maxlength="450" rows="7" cols="50" name="messageText"></textarea>
+                </div>
+            </div>
+            
+            <div class="dropForm__inputRow">
+                <label class="dropForm__inputRow_label" for="recipient">ОТ КОГО:</label>
+                <input class="dropForm__inputRow_input" type="text" name="recipient" id="recipient" placeholder="Имя или E-mail" autocomplete="off" class="t"/>
+                
+                <button class="dropForm__inputRow_btn" type="submit" name="submit" id="submit">
+                    <div class="bgTransparent_sent">
+                        <img src="../src/images/uploader/send.png"/>
+                    </div>
+                    
+                </button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+        <div class="main wrap">
+    
+    <div class="container social">
+        
+        <a href="#" class="social__help">ПОМОЩЬ</a>
+        <a href="#" class="social__rules">ПРАВИЛА</a>
+
+        <div class="social__ico">
+            <a href="#"><img src="../src/images/social/fb.png" alt=""/></a>
+            <a href="#"><img src="../src/images/social/tw.png" alt=""/></a>
+            <a href="#"><img src="../src/images/social/vk.png" alt=""/></a>
+        </div>
+        <div class="social__text">
+            <p>DropMeFiles - бесплатный сервис мгновенного обмена файлами.<br/>
+            Вы можете быстро делиться фотографиями, отправлять видео или передавать файлы большого размера.<br/>Наш файлообменник работает без регистрации, скорость загрузки и скачивания данных не ограничена.</p>
+        </div>
+        
+    </div>
+    
+</div>
+        <div class="foot">
+    <div class="enetcom"></div>
+    <div class="partners"></div>
+</div>
+    </div>
+    <script src="../src/js/header.js"></script>
+    <script src="../src/js/drop.js"></script>
+    <script src="../src/js/email.js"></script>
 </body>
 </html>
