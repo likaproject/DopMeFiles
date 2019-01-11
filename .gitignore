@@ -1,3 +1,4 @@
-node_modules/
-.idea/
-*.jpg
+node-modules/
+
+.gitignore
+dist/
