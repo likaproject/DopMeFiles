@@ -1,4 +1,3 @@
-//Aside social bar
 $(document).ready(function() {
     $('#likeMe').mouseover(function(){
         $('.dropBlock__likeMe').addClass('dropBlock__likeMe_wide');

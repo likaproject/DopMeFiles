@@ -2,7 +2,7 @@
 
 .email{
     height: 370px;
-    background: $emailBg url('../src/images/uploader/city.png') center bottom no-repeat;
+    background: $emailBg url('../images/uploader/city.png') center bottom no-repeat;
     position: relative;
     top: 0;
 }
@@ -63,7 +63,7 @@
             height: 44px;
             margin-left: 2px;
             &_passive{
-                background: url('../src/images/uploader/comm_passive.png') no-repeat center;
+                background: url('../images/uploader/comm_passive.png') no-repeat center;
                 opacity: 0.6;
                 &:hover{
                     opacity: 1;
@@ -71,7 +71,7 @@
                 } 
             }
             &_active{
-                background: url('../src/images/uploader/comm_active.png') no-repeat center;
+                background: url('../images/uploader/comm_active.png') no-repeat center;
                 opacity: 1;
             }
         }
@@ -210,7 +210,7 @@ textarea{
         position: absolute;
         top: 6px;
         left: 16px;
-        background: url("../src/images/uploader/pass_slider.png") no-repeat center;
+        background: url("../images/uploader/pass_slider.png") no-repeat center;
     }
 }
 #num_label{
@@ -237,7 +237,7 @@ textarea{
         position: absolute;
         top: 6px;
         left: 36px;
-        background: url("../src/images/uploader/pass_slider.png") no-repeat center;
+        background: url("../images/uploader/pass_slider.png") no-repeat center;
     }
 }
 //Smooth switcher 
@@ -306,7 +306,8 @@ textarea{
 .triangle{
     width: 0;
     height: 0;
-    border: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-top: 20px solid transparent;
     border-right: 20px solid $textAreaBg;
     border-bottom: 20px solid $textAreaBg;
     display: block;

@@ -3,7 +3,7 @@
 .dropBlock{
     height: 486px;
     &__likeMe{
-        background: url(../src/images/likeMe/like-layer.png) no-repeat;
+        background: url('../images/likeMe/like-layer.png') no-repeat;
         object-fit: cover;
         height: 85px;
         display: block;
@@ -16,7 +16,7 @@
         }
     }
     &__likeMe_wide{
-        background: url(../src/images/likeMe/like-layer.png) no-repeat;
+        background: url('../images/likeMe/like-layer.png') no-repeat;
         object-fit: cover;
         height: 85px;
         display: block;
