@@ -3,7 +3,7 @@ var commentField = document.getElementById('textareaContainer');
 var showTextarea = document.getElementById('showTextarea');
 var btnComm = document.getElementById('bgTransparent');
 
-function Show(e){  
+function ShowHide(e){  
     
     if(commentField.style.display === "none"){
         
@@ -14,25 +14,18 @@ function Show(e){
         
         console.log(commentField.style.display);
         e.stopImmediatePropagation();
-    }   
+    } else {
+		commentField.style.display = "none";
+            
+		btnComm.classList.remove('showTextarea_active');
+		btnComm.classList.add('showTextarea_passive');
+
+		console.log(commentField.style.display); 
+		e.stopImmediatePropagation();
+	}   
 }
 
-function Hide(e){
-    
-        if(commentField.style.display = "block"){
-            
-            commentField.style.display = "none";
-            
-            btnComm.classList.remove('showTextarea_active');
-            btnComm.classList.add('showTextarea_passive');
-            
-            console.log(commentField.style.display); 
-            e.stopImmediatePropagation();
-        }  
-}
-
-showTextarea.addEventListener("click", Show);
-showTextarea.addEventListener("click", Hide);
+showTextarea.addEventListener("click", ShowHide);
 //-- End form massage textarea --
 
 
